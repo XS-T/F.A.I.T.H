@@ -47,3 +47,4 @@ def type(typ):
 
 def search(url):
     print(url)
+    web.open(url)
