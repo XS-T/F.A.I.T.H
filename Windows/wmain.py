@@ -30,6 +30,8 @@ def send_command():
                 cmds.cmds1(outpt=outpt)
             elif "type" in outpt2:
                 cmds.type(typ=outpt)
+            elif "search" in outpt:
+                cmds.search(url=outpt2)
             else:
                 print("Nope ", + outpt)
         except UnboundLocalError:

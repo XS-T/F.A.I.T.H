@@ -44,4 +44,4 @@ def wake_word():
             pass
 
 
-platform_check()
+wake_word()

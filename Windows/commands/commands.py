@@ -7,22 +7,6 @@ from time import sleep as sl
 import pyautogui as pyg
 import webbrowser as web
 
-
-def spek():
-    while True:
-        try:
-            # GET AUDIO FROM MIC
-            r = sr.Recognizer()
-            with sr.Microphone() as source:
-                audio = r.listen(source, None, 3)
-                outpt = r.recognize_google(audio)
-        except sr.UnknownValueError:
-            pass
-        except sr.RequestError:
-            pass
-        return outpt
-
-
 def cmds1(outpt):
     if outpt == outpt:
         L = outpt.lower().split("email")
@@ -61,7 +45,5 @@ def type(typ):
         keyboard.press(Key.enter)
 
 
-def search():
-    url = spek()
+def search(url):
     print(url)
-search()
