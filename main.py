@@ -30,7 +30,7 @@ def wake_word():
         try:
             ww = voice_cmds()
             if ww == "faith":
-                print("You Said the wake word",ww)
+                print("You Said the wake word", ww)
                 platform_check()
                 break
             elif ww == "Jay":
