@@ -17,3 +17,4 @@ def voice_cmds():
     except sr.RequestError as e:
         print("Could not request Results; {0}".format(e))
     return outpt
+voice_cmds()
