@@ -7,7 +7,8 @@ from Linux import lmain
 
 def platform_check():
     if pl.system() == "Windows":
-        wm.send_command()
+        #wm.send_command()
+        print("THIS OS IS WINDOWS")
     elif pl.system() == "Linux":
         lmain.voice_cmds()
 
@@ -33,12 +34,13 @@ def wake_word():
         try:
             ww = voice_cmds()
             if ww == "faith":
-                print("You Said the wake word")
+                print("You Said the wake word",ww)
                 platform_check()
                 break
             elif ww == "Jay":
-                print("You said the wake word")
+                print("You said the wake word", ww)
                 platform_check()
+                break
             else:
                 print("Nope", ww)
                 pass
@@ -46,4 +48,4 @@ def wake_word():
             pass
 
 
-wake_word()
+platform_check()
