@@ -3,11 +3,14 @@ import speech_recognition as sr
 import platform as pl
 from Windows import wmain as wm
 from Linux import lmain
+
+
 def platform_check():
     if pl.system() == "Windows":
         wm.send_command()
     elif pl.system() == "Linux":
         lmain.voice_cmds()
+
 
 def voice_cmds():
     while True:
@@ -37,8 +40,10 @@ def wake_word():
                 print("You said the wake word")
                 platform_check()
             else:
-                print("Nope",ww)
+                print("Nope", ww)
                 pass
         except UnboundLocalError:
             pass
+
+
 wake_word()
