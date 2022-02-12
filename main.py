@@ -18,7 +18,7 @@ def voice_cmds():
             # GET AUDIO FROM MIC
             r = sr.Recognizer()
             with sr.Microphone() as source:
-                audio = r.listen(source, None, 2)
+                audio = r.listen(source, None, 3)
                 outpt = r.recognize_google(audio)
         except sr.UnknownValueError:
             pass
