@@ -2,15 +2,11 @@
 import speech_recognition as sr
 import platform as pl
 from Windows import wmain as wm
-from Linux import lmain
 
 
 def platform_check():
     if pl.system() == "Windows":
-        #wm.send_command()
-        print("THIS OS IS WINDOWS")
-    elif pl.system() == "Linux":
-        lmain.voice_cmds()
+        wm.send_command()
 
 
 def voice_cmds():
